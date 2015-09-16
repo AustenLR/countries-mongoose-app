@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class='container-fluid'>
+    <div class = 'row'>
+      <div class= 'col-md-offset-4 col-md-4 jumbotron'>
+        <form action='/countries' method='POST'>
+          <div class='form-group'>
+            <label for='country[name]'>Country Name</label>
+            <input type="text" name='country[name]' placeholder='e.g. Netherlands' class='form-control'>
+          </div>
+          <div class='form-group'>
+            <label for='country[flag]'>Flag URL:</label>
+            <input type="text" name='country[flag]' class='form-control'>
+          </div>
+          <div class='form-group'>
+            <label for='country[capital]'></label>
+            <input type="text" name='country[capital]' class='form-control' placeholder='Amseterdam'>
+          </div>
+          <div class='form-group'>
+            <label for='country[population]'></label>
+            <input type="text" name='country[population]' class='form-control'placeholder='16,800,000'>
+          </div>
+          <button type='submit' class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

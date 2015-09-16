@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class='container-fluid'>
+    <div class = 'row'>
+      <div class= 'col-md-offset-4 col-md-4 jumbotron'>
+        <table class='table table-hover'>
+          <thead>
+            <th>Name</th>
+            <th>Flag</th>
+            <th>Capital</th>
+            <th>Population</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="/countries/<%= country.id %>"> <%= country.name %> </a></td>
+              <td> <%= country.flag %> </td>
+              <td> <%= country.capital %> </td>
+              <td> <%= country.population %> </td>
+              <td> <a href="/countries/<%= country.id %>/edit">EDIT</a></td>
+              <td><form action='/countries/<%= country.id%>?_method=delete' method='POST'><button type='sumbit' class='btn btn-danger btn-xs'>DELETE</button></form></td>
+            </tr>
+            <tr>
+              <td><form action='/countries/new' method='GET'><button type='submit' class='btn btn-success btn-sm'>Add Country</button></form></td>
+            </tr>           
+          </tbody>          
+        </table>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
